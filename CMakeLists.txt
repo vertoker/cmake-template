@@ -28,10 +28,9 @@ target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAK
 # Include folder in directory (etc. combine folders)
 target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/lib/")
 
-# Add your libraries here
-#add_subdirectory(lib/glm)
-#add_subdirectory(lib/glfw)
+# Add your libraries paths here
+#add_subdirectory("lib/glm")
+#add_subdirectory("lib/glfw")
 
-# Add your libraries in a row through
-#target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE 
-#	glm, glfw)
+# Add your libraries link to src files here (you can do several)
+#target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glm, glfw)
