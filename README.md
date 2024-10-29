@@ -16,9 +16,9 @@ Template tested in Windows/Linux and on VS Code/Visual Studio
     - VS Code (I usually use *Ctrl+K* *Ctrl+O*)
     - Visual Studio (inside folder "Open with Visual Studio")
 
-4. In CMakeLists.txt follow coments, setting to your project. You must check:
+4. In CMakeLists.txt follow comments, setting to your project. You must check:
     - CMake minimum version (recommend not below 3.12)
-    - Project name (and in `add_executable` functions)
+    - Project name
     - C++ language standard
 
 5. Update remote `origin` to your GitHub (or another remote git service) package.
