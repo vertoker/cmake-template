@@ -4,15 +4,17 @@
 
 My personal CMake template for all of my projects in C++
 
-Build special for Visual Studio environment, doesn't test on other IDE
+Template tested in Windows/Linux and on VS Code/Visual Studio
 
-## How to use
+## How to use it
 
 1. Clone it. If you don't know how, well, you need to learn basics
 
-2. Rename cloned folder to your project name (recomment don't use spaces)
+2. Rename cloned folder to your project name (recommend don't use spaces)
 
-3. Open in Visual Studio (inside folder "Open with Visual Studio")
+3. Open it in your favourite IDE
+    - VS Code (I usually use *Ctrl+K* *Ctrl+O*)
+    - Visual Studio (inside folder "Open with Visual Studio")
 
 4. In CMakeLists.txt follow coments, setting to your project. You must check:
     - CMake minimum version (recommend not below 3.12)

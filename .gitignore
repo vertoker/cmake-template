@@ -2,8 +2,19 @@
 /out
 bin/
 build/
+builds/
+
+# IDE meta files
 /.vs
+/.vscode
 .idea/
+
+# Files
+*.pdb
+*.spv
+
+# Resources
+/resources/ShaderCache
 
 # Optional (I recommend disable)
 #CMakeSettings.json
