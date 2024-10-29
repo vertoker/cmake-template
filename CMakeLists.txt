@@ -3,11 +3,14 @@
 # Init
 #--------------------------------------------------------------------------------
 
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.12) # cmake version here
 project(executable VERSION 0.1 LANGUAGES CXX) # Your project name here
 
 set(CMAKE_CXX_STANDARD 20) # C++ version here
 set(DISABLE_CONSOLE 0) # Console usage
+
+#set(CMAKE_CXX_STANDARD_REQUIRED ON) # Mayde you doesn't need std
+#set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) # Link Time Optimization
 
 # Variables Zone
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
@@ -39,12 +42,6 @@ add_executable("${CMAKE_PROJECT_NAME}" "${INCLUDES}" "${SOURCES}")
 #add_executable("${CMAKE_PROJECT_NAME}" "${SOURCES}")
 
 #--------------------------------------------------------------------------------
-# Resources (feature)
-#--------------------------------------------------------------------------------
-
-target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-
-#--------------------------------------------------------------------------------
 # Libraries
 #--------------------------------------------------------------------------------
 
@@ -60,7 +57,7 @@ target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURC
 # Link Local Libraries
 #target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glm glfw)
 
-# Link Package Libraries
+# Link Package Libraries (vcpkg)
 #target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE fmt::fmt)
 
 
@@ -71,7 +68,6 @@ target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURC
 # Disable console
 if (DISABLE_CONSOLE)
 	if(MSVC) # If using the VS compiler...
-		target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC _CRT_SECURE_NO_WARNINGS)
 		set_target_properties("${CMAKE_PROJECT_NAME}" PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
 	endif()
 	# For others idk how to solve this, search through the internet or something
