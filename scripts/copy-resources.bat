@@ -3,7 +3,7 @@ rem Copy Resources (Windows)
 rem Copies Source folder and paste into Debug/Release folders
 rem made by vertoker
 
-cd ..
+cd ../..
 set PROJECT_PATH=%cd%\
 
 rem Variables
