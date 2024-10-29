@@ -3,7 +3,7 @@ rem Compile shaders (Windows)
 rem Compile shaders (using glslc) from Input into Output folder
 rem made by vertoker
 
-cd ..
+cd ../..
 set PROJECT_PATH=%cd%\
 
 rem Variables
