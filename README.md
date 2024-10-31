@@ -1,6 +1,6 @@
 # CMake Template
 
-(**If you clone it, you better delete this README.md file**)
+(**If you clone it, you better delete .git/ folder and this README.md file**)
 
 My personal CMake template for all of my projects in C++
 
@@ -21,11 +21,11 @@ Template tested in Windows/Linux and on VS Code/Visual Studio
     - Project name
     - C++ language standard
 
-5. Update remote `origin` to your GitHub (or another remote git service) package.
-I usually just write this commands
-    - `git remote remove origin`
-    - `git remote add origin <paste your link here>`
+5. Delete .git/ folder and this README.md
 
+6. Initialize git and create first commit
+
+Congratulation! You setup this template
 
 Big thanks to @meemknight, this template based on his guide 
 (and many other texts through entire internet)
