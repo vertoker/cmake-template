@@ -1,135 +1,47 @@
 {
-  "version": 3,
-  "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 12,
-    "patch": 0
-  },
-
+  "version": 6,
   "configurePresets": [
     {
-      "name": "DebugBase",
+      "name": "Base",
       "hidden": true,
-      "binaryDir": "${sourceDir}/out/Debug",
 
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CXX_FLAGS": "-O0",
-
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/Debug"
-      }
-    },
-    {
-      "name": "ReleaseBase",
-      "hidden": true,
-      "binaryDir": "${sourceDir}/out/Release",
-
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS": "-O3",
-
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/Release"
       }
     },
-
-
     {
-      "name": "x64-Debug - clang++ / Ninja",
-      "hidden": false,
-      "inherits": [ "DebugBase" ],
+      "name": "x64-Debug",
+      "inherits": [ "Base" ],
+      "binaryDir": "${sourceDir}/out/Debug",
       "generator": "Ninja",
 
       "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-O0",
         "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
+        "CMAKE_CXX_COMPILER": "clang++",
+        "PROJECT_ASSEMBLE_APP": "OFF",
+        "PROJECT_BUILD_TESTS": "OFF"
       }
     },
-
     {
-      "name": "x64-Release - clang++ / Ninja",
-      "hidden": false,
-      "inherits": [ "ReleaseBase" ],
+      "name": "x64-Release",
+      "inherits": [ "Base" ],
+      "binaryDir": "${sourceDir}/out/Release",
       "generator": "Ninja",
 
       "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-O3",
         "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
-      }
-    },
-
-    {
-      "name": "x64-Debug - g++ / Ninja",
-      "hidden": false,
-      "inherits": [ "DebugBase" ],
-      "generator": "Ninja",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++"
-      }
-    },
-
-    {
-      "name": "x64-Release - g++ / Ninja",
-      "hidden": false,
-      "inherits": [ "ReleaseBase" ],
-      "generator": "Ninja",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++"
-      }
-    },
-
-
-    {
-      "name": "x64-Debug - clang++ / Makefiles",
-      "hidden": false,
-      "inherits": [ "DebugBase" ],
-      "generator": "Unix Makefiles",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
-      }
-    },
-
-    {
-      "name": "x64-Release - clang++ / Makefiles",
-      "hidden": false,
-      "inherits": [ "ReleaseBase" ],
-      "generator": "Unix Makefiles",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
-      }
-    },
-
-    {
-      "name": "x64-Debug - g++ / Makefiles",
-      "hidden": false,
-      "inherits": [ "DebugBase" ],
-      "generator": "Unix Makefiles",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++"
-      }
-    },
-
-    {
-      "name": "x64-Release - g++ / Makefiles",
-      "hidden": false,
-      "inherits": [ "ReleaseBase" ],
-      "generator": "Unix Makefiles",
-
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++"
+        "CMAKE_CXX_COMPILER": "clang++",
+        "PROJECT_ASSEMBLE_APP": "OFF",
+        "PROJECT_BUILD_TESTS": "OFF"
       }
     }
+  ],
+  "buildPresets": [
+
   ]
 }

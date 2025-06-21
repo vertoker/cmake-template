@@ -6,6 +6,8 @@ My personal CMake template for all of my projects in C++
 
 Template tested in Windows/Linux and on VS Code/Visual Studio
 
+Required: `git`, `cmake`, C++ compiler, `vcpkg`
+
 ## How to use it
 
 1. Clone it. If you don't know how, well, you need to learn basics

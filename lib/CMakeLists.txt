@@ -1,5 +1,7 @@
 
-target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/lib/") # lib
+project(PROJECT_NAME_LIB)
+
+target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
 
 # Include folder in directory (etc. combine folders)
 
