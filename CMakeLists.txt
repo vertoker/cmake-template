@@ -9,12 +9,11 @@ project(executable VERSION 0.1 LANGUAGES CXX) # Your project name here
 set(CMAKE_CXX_STANDARD 20) # C++ version here
 set(DISABLE_CONSOLE 0) # Console usage
 
+# Variable Zone
 #set(CMAKE_CXX_STANDARD_REQUIRED ON) # Mayde you doesn't need std
 #set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) # Link Time Optimization
-
-# Variables Zone
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+#set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
+#set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 #--------------------------------------------------------------------------------
 # Src & Include

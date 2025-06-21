@@ -1,8 +1,8 @@
 # Core for CMake auto-generated files
-/out
-bin/
-build/
-builds/
+/out/
+/bin/
+/build/
+/builds/
 
 # IDE meta files
 /.vs
