@@ -1,12 +1,14 @@
+
 # Core for CMake auto-generated files
-/out/
-/bin/
-/build/
-/builds/
+[Oo]ut/
+#[Bb]uild/
+#[Bb]uilds/
+
+[Bb]in/
 
 # IDE meta files
-/.vs
-/.vscode
+.vs/
+.vscode/
 .idea/
 
 # Files
@@ -14,7 +16,7 @@
 *.spv
 
 # Resources
-/resources/ShaderCache
+#/resources/ShaderCache
 
 # Optional (I recommend disable)
 #CMakeSettings.json

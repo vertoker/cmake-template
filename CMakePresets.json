@@ -45,8 +45,8 @@
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_CXX_COMPILER": "clang++"
       }
-
     },
+
     {
       "name": "x64-Release - clang++ / Ninja",
       "hidden": false,
@@ -70,6 +70,7 @@
         "CMAKE_CXX_COMPILER": "g++"
       }
     },
+
     {
       "name": "x64-Release - g++ / Ninja",
       "hidden": false,
@@ -94,6 +95,7 @@
         "CMAKE_CXX_COMPILER": "clang++"
       }
     },
+
     {
       "name": "x64-Release - clang++ / Makefiles",
       "hidden": false,
@@ -117,6 +119,7 @@
         "CMAKE_CXX_COMPILER": "g++"
       }
     },
+
     {
       "name": "x64-Release - g++ / Makefiles",
       "hidden": false,

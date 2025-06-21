@@ -26,6 +26,3 @@ Template tested in Windows/Linux and on VS Code/Visual Studio
 6. Initialize git and create first commit
 
 Congratulation! You setup this template
-
-Big thanks to @meemknight, this template based on his guide 
-(and many other texts through entire internet)
