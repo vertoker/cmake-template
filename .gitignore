@@ -1,8 +1,9 @@
 
 # Core for CMake auto-generated files
 [Oo]ut/
-#[Bb]uild/
-#[Bb]uilds/
+[Bb]uild/
+[Bb]uilds/
+[Ii]nstall/
 
 [Bb]in/
 
