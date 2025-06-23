@@ -31,3 +31,7 @@ Required: `git`, `cmake`, `vcpkg`, C++ compiler (`clang++` by default)
 6. Initialize git, add all and create first commit
 
 Congratulation! You setup this template
+
+Based on
+- https://github.com/meemknight/cmakeSetup
+- https://github.com/MihailRis/voxelcore
