@@ -8,9 +8,4 @@ list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp")
 add_library(PROJECT_NAME_SRC STATIC ${SOURCES} ${HEADERS})
 set_target_properties(PROJECT_NAME_SRC PROPERTIES LINKER_LANGUAGE CXX)
 
-# Dependencies
-#find_package(fmt CONFIG REQUIRED)
-
 target_include_directories(PROJECT_NAME_SRC PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-#target_link_libraries(PROJECT_NAME_SRC PUBLIC fmt::fmt-header-only)

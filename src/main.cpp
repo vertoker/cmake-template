@@ -3,8 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Hi" << std::endl;
+    fmt::println("Hi");
     std::cin.get();
-
     return 0;
 }

@@ -1,7 +1,7 @@
 
 # Init
 
-cmake_minimum_required(VERSION 3.12) # cmake version here
+cmake_minimum_required(VERSION 3.10) # cmake version here
 project(PROJECT_NAME VERSION 0.1 LANGUAGES CXX) # Your project name here
 
 execute_process(COMMAND ${CMAKE_COMMAND} --version)
@@ -19,7 +19,6 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) # LTO
 #set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 #set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
 
-
 # Build
 
 add_executable(PROJECT_NAME "src/main.cpp")
@@ -33,8 +32,11 @@ if (PROJECT_NAME_SRC) # if src is empty
 	target_link_libraries(PROJECT_NAME PUBLIC PROJECT_NAME_SRC)
 endif()
 
-# Tests
+# Dependencies
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(PROJECT_NAME PUBLIC fmt::fmt)
 
+# Tests
 if(PROJECT_BUILD_TESTS)
     add_subdirectory("test/")
 endif()

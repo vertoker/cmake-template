@@ -5,6 +5,8 @@
 #include <memory>
 #include <cstdint>
 
+#include <fmt/base.h>
+
 // Literals
 
 using u_char = unsigned char;
