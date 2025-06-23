@@ -2,5 +2,5 @@
 
 TEST(TestTopic, TestTest)
 {
-	EXPECT_EQ(2 + 2, 4);
+	ASSERT_EQ(2 + 2, 4);
 }

@@ -1,4 +1,6 @@
-#pragma once
+
+#ifndef TYPEDEF_HPP
+#define TYPEDEF_HPP
 
 #include <memory>
 #include <cstdint>
@@ -34,7 +36,6 @@ using u64 = uint64_t;
 
 using f32 = float;
 using f64 = double;
-
-using i128 = __int128_t;
-using u128 = __uint128_t;
 using f128 = long double;
+
+#endif // !TYPEDEF_HPP
