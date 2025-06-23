@@ -6,42 +6,61 @@
       "hidden": true,
 
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/Release"
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
       }
     },
     {
       "name": "x64-Debug",
       "inherits": [ "Base" ],
-      "binaryDir": "${sourceDir}/out/Debug",
-      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Visual Studio 17 2022",
 
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CXX_FLAGS": "-O0",
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++",
-        "PROJECT_ASSEMBLE_APP": "OFF",
-        "PROJECT_BUILD_TESTS": "OFF"
+        "PROJECT_ASSEMBLE_BUILD": "ON",
+        "PROJECT_BUILD_TESTS": "ON"
       }
     },
     {
       "name": "x64-Release",
       "inherits": [ "Base" ],
-      "binaryDir": "${sourceDir}/out/Release",
-      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Visual Studio 17 2022",
 
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS": "-O3",
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++",
-        "PROJECT_ASSEMBLE_APP": "OFF",
-        "PROJECT_BUILD_TESTS": "OFF"
+        "PROJECT_ASSEMBLE_BUILD": "ON",
+        "PROJECT_BUILD_TESTS": "ON"
       }
     }
   ],
   "buildPresets": [
-
+    {
+      "name": "Debug build",
+      "configurePreset": "x64-Debug",
+      "configuration": "Debug"
+    },
+    {
+      "name": "Release build",
+      "configurePreset": "x64-Release",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "Debug tests",
+      "configurePreset": "x64-Debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "Release tests",
+      "configurePreset": "x64-Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
   ]
 }
