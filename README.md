@@ -22,7 +22,8 @@ Required: `git`, `cmake`, C++ compiler, `vcpkg`
     - CMake minimum version (I recommend not below 3.10)
     - C++ language standard (I recommend not below C++11)
     - Replace `PROJECT_NAME` to your project name
-    - Replace `PROJECT_NAME_SRC` to your project name + `src` prefix
+    - Replace `PROJECT_NAME_SRC` to your project name + any `src` prefix
+    - Replace `PROJECT_NAME_TEST` to your project name + any `test` prefix
 
 5. Delete `.git/` folder and this `README.md`
 

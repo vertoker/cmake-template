@@ -16,8 +16,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) # Maybe you doesn't need std
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) # LTO
-#set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
 #set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+#set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
 
 
 # Build
@@ -36,6 +36,5 @@ endif()
 # Tests
 
 if(PROJECT_BUILD_TESTS)
-    enable_testing()
     add_subdirectory("test/")
 endif()
