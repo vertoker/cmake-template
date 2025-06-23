@@ -22,7 +22,7 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) # LTO
 
 # Build
 
-add_executable(${CMAKE_PROJECT_NAME} "src/main.cpp")
+add_executable(PROJECT_NAME "src/main.cpp")
 add_subdirectory("src/")
 
 if(PROJECT_ASSEMBLE_BUILD)
@@ -30,7 +30,7 @@ if(PROJECT_ASSEMBLE_BUILD)
 endif()
 
 if (PROJECT_NAME_SRC) # if src is empty
-	target_link_libraries(PROJECT_NAME PRIVATE PROJECT_NAME_SRC)
+	target_link_libraries(PROJECT_NAME PUBLIC PROJECT_NAME_SRC)
 endif()
 
 # Tests

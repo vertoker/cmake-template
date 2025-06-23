@@ -16,7 +16,7 @@
       "name": "x64-Debug",
       "inherits": [ "Base" ],
       "binaryDir": "${sourceDir}/build",
-      "generator": "Visual Studio 17 2022",
+      "generator": "Ninja Multi-Config",
 
       "cacheVariables": {
         "PROJECT_ASSEMBLE_BUILD": "ON",
@@ -27,7 +27,7 @@
       "name": "x64-Release",
       "inherits": [ "Base" ],
       "binaryDir": "${sourceDir}/build",
-      "generator": "Visual Studio 17 2022",
+      "generator": "Ninja Multi-Config",
 
       "cacheVariables": {
         "PROJECT_ASSEMBLE_BUILD": "ON",
