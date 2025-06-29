@@ -5,11 +5,11 @@
 My personal CMake template for all of my projects in C++
 
 Template tested in Windows/Linux and on VS Code/Visual Studio
-(can't compile tests on Visual Studio, I recommend use VS Code)
+(can't compile tests on Visual Studio, use VS Code for CMake)
 
 Required: `git`, `cmake`, `vcpkg`, C++ compiler (`clang++` by default)
 
-## How to use it
+## How to setup it
 
 1. Clone/download it. If you don't know how, well, you need to learn basics
 
@@ -30,7 +30,7 @@ Required: `git`, `cmake`, `vcpkg`, C++ compiler (`clang++` by default)
 
 6. Initialize git, add all and create first commit
 
-Congratulation! You setup this template
+Congratulations! You setup this template
 
 Based on
 - https://github.com/meemknight/cmakeSetup
