@@ -35,5 +35,5 @@ target_link_libraries(PROJECT_NAME PUBLIC fmt::fmt)
 
 # Tests
 if(PROJECT_BUILD_TESTS)
-    add_subdirectory("test/")
+    add_subdirectory("tests/")
 endif()
